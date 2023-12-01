@@ -20,7 +20,7 @@ export const Navbar = () => {
             OMERTA
           </Link>
           <div className='menu-icon' onClick={handleClick}>
-            <i className={click ? 'faCircleXmark' : 'faBars'} />
+            <FontAwesomeIcon icon = {click ?  faCircleXmark : faBars} />
           </div>
           <ul className={click ? 'nav-menu active' : 'nav-menu'}>
             <li className='nav-item'>
@@ -40,7 +40,7 @@ export const Navbar = () => {
             <li className='nav-item'>
               <Link
                 to='/products'
-                className='nav-links'
+                className='nav-links special'
                 onClick={closeMobileMenu}
               >
                 Projects
