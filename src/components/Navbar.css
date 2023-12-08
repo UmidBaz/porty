@@ -65,6 +65,7 @@ html{
 .special{
   border-color: #5E7CE2;
   color: #5E7CE2;;
+  border-radius: 5px;
 }
 
 .fa-bars {
