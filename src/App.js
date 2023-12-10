@@ -2,6 +2,8 @@ import './App.css';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Cards from './components/Cards';
+import Header from './components/Header';
+
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'
 
 function App() {
@@ -12,6 +14,7 @@ function App() {
         <Routes>
           <Route path='/' exact/>
         </Routes>
+        <Header/>
         <Cards/>
       </Router>
     </>
