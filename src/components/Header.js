@@ -1,20 +1,25 @@
 import React, { useEffect, useRef, useState} from 'react';
 import './Header.css';
 import computer from '../assets/computer.png';
+import textOptions from './textOptions.json';
 
-const codeSnippet = `
+/*const codeSnippet = `
     int main() {
         printf("Hello World");
         return 0;
     }
 `;
+*/
+
+const randomIndex = Math.floor(Math.random() * textOptions.options.length);
+const optionsArray = textOptions.options[randomIndex];
 
 const Header = () => {
     const textElementRef = useRef(null);
     const [animationInProgress, setAnimationInProgress] = useState(false);
 
     useEffect(() => {
-        const textToType = codeSnippet;
+        const textToType = optionsArray; //changed this line
         const totalLength = textToType.length;
 
         function updateTextOnScroll() {
@@ -48,6 +53,13 @@ const Header = () => {
             <div className='code-container' >
                 <pre ref={textElementRef}></pre>
             </div>
+        </div>
+        <div className='h-wrapper'>
+        <h1>
+            Coding <br/>
+            & <br />
+            Cyber
+        </h1>
         </div>
     </div>
     )

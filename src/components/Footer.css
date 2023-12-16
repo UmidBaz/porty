@@ -1,0 +1,30 @@
+.footer {
+    background-color: white;
+    text-align: center;
+    text-transform: uppercase;
+    padding-top: 30px;
+    margin-top: auto;
+}
+.footer-copyright{
+    background-color:#52527a;
+    color: #ffffff;
+    padding: 15px;
+    margin-top: 30px;
+    text-transform: capitalize;
+}
+.footer-menu{
+    display: flex;
+    justify-content: center;
+    list-style-type: none; /* Remove bullets */
+    padding-left: 0px;
+}
+.footer-menu a{
+    color: black;
+    text-transform: capitalize;
+    display: inline; /* Display menu items inline */
+    padding: 0 40px; /* Adjust the padding as needed */
+}
+.footer-menu a:hover{
+    color: blue;
+    transition: 0.5s;
+}

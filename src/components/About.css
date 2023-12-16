@@ -1,0 +1,15 @@
+.about{
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    width: auto;
+}
+.about h1{
+    margin: 0 0 0 0;
+}
+.about p{
+    font-family: 'Roboto', sans-serif;
+    font-size: 24px;
+    text-align: left;
+    justify-content: center;
+}

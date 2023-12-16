@@ -1,8 +1,11 @@
 {
     "options": [
-        "<>"
-
-
-
+        "int main() {\n    printf(\"Hello World\");\n    return 0;\n}",
+        "int main() {\n    std::cout << \"Hello World\";\n    return 0;\n}",
+        "IDENTIFICATION DIVISION.\nPROGRAM-ID. Hello-world.\nPROCEDURE DIVISION.\n        DISPLAY \"Hello World\".    .",
+        "namespace HelloWorld\n{\n    class Hello {\n        static void Main(string[] args) {\n            System.Console.WriteLine(\"Hello World\");\n        }\n    }\n}",
+        "program Hello;\nbegin\n      writeln ('Hello, world.');\nend.",
+        "class HelloWorld {\n    public static void main (String[] args) {\n        System.out.println(\"Hello World\");\n    }\n}",
+        "    global _main\n    extern _printf\n \n    section .text\n_main:\n    push    message\n    call    _printf\n    add    esp, 4\nmessage:\n    db    'Hello World', 10, 0"
     ]
 }

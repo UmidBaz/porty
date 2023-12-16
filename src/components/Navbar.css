@@ -2,7 +2,8 @@
 *{
   text-decoration: none;
   font-family: 'Roboto', sans-serif;
-  /* outline: 1px solid red; */
+  outline: 1px solid red;
+  box-sizing: border-box;
 }
 body{
   margin: 0px;

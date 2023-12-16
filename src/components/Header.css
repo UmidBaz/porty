@@ -1,30 +1,87 @@
 @import url('https://fonts.cdnfonts.com/css/cascadia-code');
 
 .home{
+    display: flex;
+    flex-direction: row;
     margin: 0;
-    height: 100vh;
 }
 .home-container{
     display: flex;
-    justify-content: center;
+    position: relative;
+    justify-content: flex-start;
     align-items: center;
     height: 100vh;
+    width: 100vw;
+    overflow: hidden;
 }
 .home-container img {
-    max-height: 100%;
-    max-width: 100%;
+    width: 1000px; 
+    height: 920px;
+    min-height: 920px; 
 }
 
 .code-container {
+    position: absolute;
+    height: 400px;
+    width: 550px;
+    top:  150px;
+    left: 200px;
     white-space: pre;
     overflow: hidden;
-    height: 200px;
-    width: 500px;
-    max-height: 100%;
 }
 .code-container pre{
     color: green;
-    size: 2rem;
     font-family: 'Cascadia Code', sans-serif;
+    font-size: 1rem;
+    max-width: 100%;
+    white-space: pre-wrap;
 }
+.h-wrapper{
+    height: 100vh;
+    width: 100vw;
+}
+h1 {
+    background-clip: text;
+    background-image: linear-gradient(to right, #09f1b8, #00a2ff, #ff00d2, #fed90f);
+    color: var(--color-background);
+    font-size: var(--font-size);
+    font-weight: var(--font-weight);
+    letter-spacing: var(--letter-spacing);
+    padding: calc(--stroke-width / 2);
+    -webkit-text-stroke-color: transparent;
+    -webkit-text-stroke-width: var(--stroke-width);
+    --color-background: #FFEDE1;
+    --stroke-width: calc(1em / 16);
+    --font-size: 20vmin;
+    --font-weight: 700;
+    --letter-spacing: calc(1em / 8);
+}
+@media screen and (max-width: 1600px) {
+.home{
+        flex-direction: column;
+}
+h1{
+    text-align: center;
+}
+.home-container{
+    justify-content: center;
+}
+.code-container{
+    left: auto;
+}
+}
+@media screen and (max-width: 960px) {
+.home{
+    flex-direction: column;
+}
+h1{
+    text-align: center;
+    width: 100%;
+    height: 100%;
+}
+.h-wrapper{
+    width: 100%;
+    height: 100%;
 
+}
+}
