@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import './Navbar.css';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -6,10 +6,30 @@ import { faMicrochip } from "@fortawesome/free-solid-svg-icons";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 import { faCircleXmark } from "@fortawesome/free-solid-svg-icons";
 
+const hideNavbar = () => {
+  const nav = document.querySelector(".navbar");
+  let lastScrollY = window.scrollY;
+
+  window.addEventListener("scroll", () => {
+    if(lastScrollY < window.scrollY){
+      nav.classList.add("navbar-hidden");
+    } else{
+      nav.classList.remove("navbar-hidden");
+    }
+    lastScrollY = window.scrollY;
+  });
+
+};
+
+
 export const Navbar = () => {
   const [click, setClick] = useState(false)
   const handleClick = () => setClick(!click);
   const closeMobileMenu = () => setClick(false)
+
+  useEffect(() => {
+    hideNavbar();
+  }, []);
 
   return (
     <>

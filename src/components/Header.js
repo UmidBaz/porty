@@ -3,14 +3,6 @@ import './Header.css';
 import computer from '../assets/computer.png';
 import textOptions from './textOptions.json';
 
-/*const codeSnippet = `
-    int main() {
-        printf("Hello World");
-        return 0;
-    }
-`;
-*/
-
 const randomIndex = Math.floor(Math.random() * textOptions.options.length);
 const optionsArray = textOptions.options[randomIndex];
 
@@ -25,7 +17,7 @@ const Header = () => {
         function updateTextOnScroll() {
             const scrollPercentage =
                 (document.documentElement.scrollTop + document.body.scrollTop) /
-                ((document.documentElement.scrollHeight - document.documentElement.clientHeight)/4);
+                ((document.documentElement.scrollHeight - document.documentElement.clientHeight)/8);
 
             const index = Math.floor(scrollPercentage * totalLength);
 

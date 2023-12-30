@@ -3,16 +3,17 @@ import './Footer.css';
 
 export const Footer = () => {
   return (
-    <div className='footer'>
-        <ul class="footer-menu">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Partners</a></li>
-                <li><a href="#">Contact Us</a></li>
-        </ul>
-        <div className='footer-copyright'>
-            <p>Copyright @ 2023 All Rights Reserved.</p>
-        </div>
+    <div class="footer-basic">
+        <footer>
+            <ul >
+                <li ><a href="#">Home</a></li>
+                <li ><a href="#">Services</a></li>
+                <li ><a href="#">About</a></li>
+                <li ><a href="#">Terms</a></li>
+                <li ><a href="#">Privacy Policy</a></li>
+            </ul>
+            <p class="copyright">Arcanas LLC © 2023</p>
+        </footer>
     </div>
   )
 }

@@ -50,7 +50,7 @@ h1 {
     padding: calc(--stroke-width / 2);
     -webkit-text-stroke-color: transparent;
     -webkit-text-stroke-width: var(--stroke-width);
-    --color-background: #FFEDE1;
+    --color-background: #2E2D4D;
     --stroke-width: calc(1em / 16);
     --font-size: 20vmin;
     --font-weight: 700;
