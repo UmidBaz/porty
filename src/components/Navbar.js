@@ -1,5 +1,8 @@
 import React, {useState, useEffect} from 'react';
 import './Navbar.css';
+import './Header.js';
+import './About.js';
+import './Cards.js';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMicrochip } from "@fortawesome/free-solid-svg-icons";
@@ -44,27 +47,19 @@ export const Navbar = () => {
           </div>
           <ul className={click ? 'nav-menu active' : 'nav-menu'}>
             <li className='nav-item'>
-              <Link to='/' className='nav-links' onClick={closeMobileMenu}>
+              <a href='#home' className='nav-links' onClick={closeMobileMenu}>
                 Home
-              </Link>
+              </a>
             </li>
             <li className='nav-item'>
-              <Link
-                to='/services'
-                className='nav-links'
-                onClick={closeMobileMenu}
-              >
+              <a href='#about' className='nav-links' onClick={closeMobileMenu}>
                 About
-              </Link>
+              </a>
             </li>
             <li className='nav-item'>
-              <Link
-                to='/products'
-                className='nav-links special'
-                onClick={closeMobileMenu}
-              >
+              <a href='#cards' className='nav-links special' onClick={closeMobileMenu}>
                 Projects
-              </Link>
+              </a>
             </li>
           </ul>
         </div>

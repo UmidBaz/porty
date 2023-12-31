@@ -39,7 +39,7 @@ const Header = () => {
 
 
     return (
-    <div className='home'>
+    <div id='home' className='home'>
         <div className='home-container'>
             <img src={computer} alt='computer'/>
             <div className='code-container' >

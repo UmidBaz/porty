@@ -38,7 +38,7 @@ const About = () => {
 
   return (
     <>
-      <div className='about'>
+      <div id='about' className='about'>
         <h1>Developer's Journey</h1>
         <div className='para-wrapper'>
           <h2>Crafting Innovative Solutions in Code</h2>
