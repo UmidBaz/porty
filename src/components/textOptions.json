@@ -1,11 +1,13 @@
 {
     "options": [
-        "int main() {\n    printf(\"Hello World\");\n    return 0;\n}",
-        "int main() {\n    std::cout << \"Hello World\";\n    return 0;\n}",
-        "IDENTIFICATION DIVISION.\nPROGRAM-ID. Hello-world.\nPROCEDURE DIVISION.\n        DISPLAY \"Hello World\".    .",
+        "using namespace std;\n\nint main() {\n    cout << 'Welcome to the world of C++ programming!' << endl;\n\n    string name;\n    cout << 'Enter your name: ';\n    getline(cin, name);\n\n    cout << 'Hello, ' << name << '! Enjoy your C++ journey.' << endl;\n\n    return 0;\n}",
+        "int main() {\n    printf('Welcome to the world of C programming!\\n');\n\n    char name[20];\n    printf('Enter your name: ');\n    fgets(name, sizeof(name), stdin);\n\n    printf('Hello, %s! Enjoy your C journey.\\n', name);\n\n    return 0;\n}",
+        "using System;\n\nclass Program {\n    static void Main() {\n        Console.WriteLine(\"Welcome to the world of C# programming!\");\n\n        Console.Write(\"Enter your name: \");\n        string name = Console.ReadLine();\n\n        Console.WriteLine($\"Hello, {name}! Enjoy your C# journey.\");\n    }\n}",
         "namespace HelloWorld\n{\n    class Hello {\n        static void Main(string[] args) {\n            System.Console.WriteLine(\"Hello World\");\n        }\n    }\n}",
-        "program Hello;\nbegin\n      writeln ('Hello, world.');\nend.",
+        "import java.util.Scanner;\n\npublic class WelcomeJava {\n    public static void main(String[] args) {\n        System.out.println(\"Welcome to the world of Java programming!\");\n\n        Scanner scanner = new Scanner(System.in);\n        System.out.print(\"Enter your name: \");\n        String name = scanner.nextLine();\n\n        System.out.println(\"Hello, \" + name + \"! Enjoy your Java journey.\");\n    }\n}",
         "class HelloWorld {\n    public static void main (String[] args) {\n        System.out.println(\"Hello World\");\n    }\n}",
-        "    global _main\n    extern _printf\n \n    section .text\n_main:\n    push    message\n    call    _printf\n    add    esp, 4\nmessage:\n    db    'Hello World', 10, 0"
+        "    global _main\n    extern _printf\n \n    section .text\n_main:\n    push    message\n    call    _printf\n    add    esp, 4\nmessage:\n    db    'Hello World', 10, 0",
+        "const compose = (...fns) =>\n    fns.reduce((f, g) => (...args) => f(g(...args)));\n\nconst digitize = n => [...`${n}`].map(i => parseInt(i));\nconst add5 = x => x + 5;\nconst multiply = (x, y) => x * y;\n\nconst composedFn = compose(\n    digitize,\n    add5,\n    multiply\n);\ncomposedFn(5, 2);",
+        "const pipe = (...fns) =>\n    fns.reduce((f, g) => (...args) => g(f(...args)));\n\nconst digitize = n => [...`${n}`].map(i => parseInt(i));\nconst add5 = x => x + 5;\nconst multiply = (x, y) => x * y;\n\nconst composedFn = pipe(multiply, add5, digitize);\ncomposedFn(5, 2);"
     ]
 }

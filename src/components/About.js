@@ -1,11 +1,45 @@
-import React from 'react'
+import React, { useEffect } from 'react';
 import './About.css';
 
 const About = () => {
+
+
+  useEffect(() => {
+    const aboutSection = document.querySelector('.about');
+  
+    const observer = new IntersectionObserver(
+      (entries) => {
+        // entries is an array of observed elements
+        const isVisible = entries[0]?.isIntersecting;
+        
+        if (isVisible) {
+          aboutSection.classList.add('visible');
+        } else {
+          aboutSection.classList.remove('visible');
+        }
+      },
+      {
+        threshold: 0.2, 
+      }
+      );
+  
+      if (aboutSection) {
+        observer.observe(aboutSection);
+      }
+  
+      return () => {
+        if (aboutSection) {
+        observer.unobserve(aboutSection);
+      }
+    };
+  }, []);
+
+
+
   return (
     <>
       <div className='about'>
-        <h1>The Developer's Journey</h1>
+        <h1>Developer's Journey</h1>
         <div className='para-wrapper'>
           <h2>Crafting Innovative Solutions in Code</h2>
           <p>
@@ -35,7 +69,7 @@ const About = () => {
           online experience for all.
           </p>
         </div>
-        <h1>Navigating the Digital Frontier</h1>
+        <h1>The Digital Frontier</h1>
         <h1>Pioneering Possibilities</h1>
         <div className='para-wrapper'>
           <h2>Enabling Interactivity Through Code</h2>

@@ -3,7 +3,8 @@
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 2rem; 
     padding: 2rem;
-    height: 100vh;
+    height: auto;
+    min-height: 100vh;
 }
 .card-wrapper {
     position: relative;
@@ -42,7 +43,7 @@
     border-radius: 2rem;
     opacity: 1;
     pointer-events: none;
-    z-index: -1; 
+    z-index: -1;
 
 }
 

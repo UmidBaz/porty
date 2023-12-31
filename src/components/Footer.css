@@ -1,7 +1,7 @@
 .footer-basic {
-    padding:40px 0;
+    padding: 20px 0;
     background-color:#ffffff;
-    color:#4b4c4d;
+    color:black;
 }
 
 .footer-basic ul {
@@ -27,10 +27,7 @@
 
 .footer-basic ul a:hover {
     opacity:1;
-}
-
-.footer-basic .social > a:hover {
-    opacity:0.9;
+    color: #5E7CE2;
 }
 
 .footer-basic .copyright {
