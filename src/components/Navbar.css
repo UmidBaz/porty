@@ -82,10 +82,10 @@ html{
 }
 
 .fa-bars {
-  color:#0A369D;
+  color:#5E7CE2;
 }
 .fa-circle-xmark {
-  color:#0A369D;
+  color:#5E7CE2;
 }
 .nav-links-mobile {
   display: none;
@@ -94,10 +94,6 @@ html{
   display: none;
 }
 @media screen and (max-width: 960px) {
-  .nav-item {
-    /* overflow: hidden; */
-    /* position: relative; */
-  }
   .menu-icon {
     display: block;
     position: absolute;
@@ -111,8 +107,6 @@ html{
   .nav-menu {
     display: flex;
     flex-direction: column;
-    /* padding-left: 0px; */
-    /* position: fixed; */
     width: 100vw;
     height: min-content;
     position: absolute; 
@@ -122,12 +116,13 @@ html{
     transition: all 0.5s ease;
   }
   .nav-menu.active {
-    background-color: #0A369D;
+    background-color: white;
     right: 0;
     transition: all 0.5s ease;
     z-index: 1;
     opacity: 1;
     height: min-content;
+    padding-left: 0;
   }
 
   .nav-links {
@@ -140,16 +135,15 @@ html{
   }
 
   .nav-links:hover {
-    background-color: #fff;
-    color: #0A369D;
+    background-color: #2E2D4D;
+    color: white;
     border-radius: 0;
+    border-bottom: none;
   }
 
   .fa-circle-xmark {
-    color: #fff;
     font-size: 2rem;
     color: #5E7CE2;
-    color:#0A369D;
   }
 
   .nav-links-mobile:hover {
@@ -160,5 +154,8 @@ html{
   .special{
     border-color: transparent;
     color: #5E7CE2;
+  }
+  .nav-item:hover{
+
   }
 }
