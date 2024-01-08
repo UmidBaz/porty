@@ -14,9 +14,10 @@ function generateRandomString() {
 }
 
 const Lightproj = () => {
-  const random_pic = light_link + generateRandomString();
 
   const showScreenshot = () => {
+    const random_pic = light_link + generateRandomString();
+
     window.open(random_pic, '_blank');
   };
 
