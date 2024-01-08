@@ -20,7 +20,6 @@ const Lightproj = () => {
     window.open(random_pic, '_blank');
   };
 
-
   return (
     <div className='screen-wrap'>
         <h1>Random Print Screen Using LightShot</h1>
