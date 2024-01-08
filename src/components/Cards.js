@@ -1,4 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
+import { Link } from 'react-router-dom';
+
 import './Cards.css';
 
 function Cards() {
@@ -7,9 +9,10 @@ function Cards() {
     <div id='cards' className='cards'>
       <div className="card-container" id="cardContainer">
         <div className="card-wrapper">
-          <div className="card">project 1
+        <Link to="/lightproj" className="card">
+            Project 1
             <div className="exp-card">Explanation Card</div>
-          </div>
+        </Link>
         </div>
         <div className="card-wrapper">
           <div className="card">Project 2

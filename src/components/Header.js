@@ -26,7 +26,6 @@ const Header = () => {
 
             if (index >= totalLength) {
                 setAnimationInProgress(true);
-                console.log(animationInProgress)
             }
         }
 

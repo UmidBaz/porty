@@ -1,0 +1,66 @@
+.screen-wrap {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    margin: 100px auto 100px auto; 
+    max-width: 800px; 
+
+}
+
+.screen-wrap h1 {
+    font-size: 3rem;
+    text-align: center;
+}
+
+h4 {
+    color: white;
+    font-size: 2rem;
+    text-align: center;
+}
+
+.screen-wrap p {
+    color: #2E2D4D;
+    text-align: left;
+    border: 2px solid #5e7ce2;
+    border-radius: 0.5rem;
+    margin: .1rem; 
+    padding: 1rem; /* Add padding for better spacing */
+    background-color: #5e7ce2;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.6); 
+}
+
+.screen-wrap button {
+    margin-top: 40px;
+    border: none;
+    outline: none;
+    position: relative;
+    border-radius: 5px;
+    background: linear-gradient(to right, #09f1b8, #00a2ff, #ff00d2, #fed90f);
+    cursor: pointer;
+    padding: 25px 90px;
+}
+
+.screen-wrap button::after {
+    content: "";
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    bottom: 2px;
+    left: 2px;
+    background-color: #2E2D4D;
+    border-radius: 4px;
+}
+.screen-wrap button::after {
+    content: attr(data);
+    font-size: 16px;
+    color: white;
+    text-align: center;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.screen-wrap button:hover::after {
+    background-color: white;
+    color: black;
+}

@@ -34,6 +34,18 @@ export const Navbar = () => {
     hideNavbar();
   }, []);
 
+  const scrollToSection = (sectionId) => {
+    const section = document.getElementById(sectionId);
+
+      if (section) {
+        const rect = section.getBoundingClientRect();
+        if (rect.top < 0 || rect.bottom > window.innerHeight) {
+          section.scrollIntoView({ behavior: 'smooth' });
+        }
+      }
+    closeMobileMenu();
+  };
+
   return (
     <>
       <nav className='navbar'>
@@ -57,9 +69,9 @@ export const Navbar = () => {
               </a>
             </li>
             <li className='nav-item'>
-              <a href='#cards' className='nav-links special' onClick={closeMobileMenu}>
+              <Link to='/' className='nav-links special' onClick={() => scrollToSection('cards')}>
                 Projects
-              </a>
+              </Link>
             </li>
           </ul>
         </div>
@@ -67,4 +79,5 @@ export const Navbar = () => {
     </>
   );
 }
-export default Navbar
+
+export default Navbar;

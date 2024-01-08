@@ -4,8 +4,9 @@ import Footer from './components/Footer';
 import Cards from './components/Cards';
 import Header from './components/Header';
 import About from './components/About';
+import Lightproj from './projetcs/lightshotproj/Lightproj';
 
-import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'
+import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 
 function App() {
   return (
@@ -14,7 +15,10 @@ function App() {
         <Navbar/>
         <Header/>
         <About/>
-        <Cards/>
+        <Routes>
+          <Route path="/" element={<Cards />} />
+          <Route path="/lightproj" element={<Lightproj />} />
+        </Routes>
         <Footer/>
       </Router>
     </>
@@ -22,4 +26,3 @@ function App() {
 }
 
 export default App;
-<Route path='/' exact/>
