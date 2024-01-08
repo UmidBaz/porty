@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './Lightproj.css';
 
 const light_link = 'https://prnt.sc/';
@@ -14,44 +14,11 @@ function generateRandomString() {
 }
 
 const Lightproj = () => {
-  const [imageUrl, setImageUrl] = useState('');
-
   const random_pic = light_link + generateRandomString();
 
-  function getPicture(targetUrl) {
-    fetch(targetUrl) 
-      .then(response => {
-        if (!response.ok) {
-          throw new Error('Network response was not ok');
-        }
-        return response.text();
-      })
-      .then(html => {
-        const parser = new DOMParser();
-        const htmlDoc = parser.parseFromString(html, 'text/html');
-
-        const underImageDiv = htmlDoc.querySelector('.under-image');
-        if (underImageDiv) {
-          const imgElement = underImageDiv.querySelector('img');
-          if (imgElement) {
-            const imageUrl = imgElement.getAttribute('src');
-            setImageUrl(imageUrl);
-          } else {
-            console.error('No image found in the under-image div');
-          }
-        } else {
-          console.error('No div with class "under-image" found');
-        }
-      })
-      .catch(error => {
-        console.error('Error fetching data:', error);
-      });
-  }
-
   const showScreenshot = () => {
-    getPicture(random_pic);
+    window.open(random_pic, '_blank');
   };
-
 
 
   return (
@@ -72,13 +39,6 @@ const Lightproj = () => {
         potential exposure of sensitive or private information that individuals may have unintentionally shared.
         </p>
         <button onClick={showScreenshot} data="Show Screenshot"></button>
-        
-        {imageUrl && (
-        <div>
-          <img src={imageUrl} alt="Fetched Screenshot" />
-        </div>
-        )}
-
     </div>
   )
 }
