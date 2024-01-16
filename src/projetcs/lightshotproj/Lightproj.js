@@ -17,10 +17,25 @@ const Lightproj = () => {
 
   const showScreenshot = () => {
     const random_pic = light_link + generateRandomString();
-
     window.open(random_pic, '_blank');
   };
 
+  const showScreenshot5 = () => {
+    for (let i = 0; i < 5; i++) {
+      setTimeout(() => {
+        const random_pic = light_link + generateRandomString();
+        window.open(random_pic, '_blank');
+      }, i * 250);
+    }
+  };
+  const showScreenshot10 = () => {
+    for (let i = 0; i < 10; i++) {
+      setTimeout(() => {
+        const random_pic = light_link + generateRandomString();
+        window.open(random_pic, '_blank');
+      }, i * 250);
+    }
+  };
   return (
     <div className='screen-wrap'>
         <h1>Random Print Screen Using LightShot</h1>
@@ -38,7 +53,12 @@ const Lightproj = () => {
         It also serves as a demonstration of cybersecurity risk. By randomly accessing screenshots, it highlights the 
         potential exposure of sensitive or private information that individuals may have unintentionally shared.
         </p>
-        <button onClick={showScreenshot} data="Show Screenshot"></button>
+        <div className='button-wrapper'>
+          <button className='sideButtons' onClick={showScreenshot5} data="+5"></button>
+          <button onClick={showScreenshot} data="Show Screenshot"></button>
+          <button className='sideButtons' onClick={showScreenshot10} data="+10"></button>
+        </div>
+        <p1>Note: For Chrome users: Simply click the small "popup blocker" icon at the right end of the address bar and enable popups from the current site</p1>
     </div>
   )
 }

@@ -12,8 +12,8 @@
     height: 350px;
 }
 .card {
+    background-color: grey;
     position: relative;
-    background-color: rgb(177, 173, 173);
     height: 350px;
     border-radius: 2rem;
     font-size: 24px;
@@ -23,7 +23,10 @@
     align-items: center;
     justify-content: center;
     transition: height 0.3s ease;
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+    border: 1px solid black;
 }
+
 .exp-card{
     position: absolute;
     display: flex;
@@ -44,9 +47,15 @@
     opacity: 1;
     pointer-events: none;
     z-index: -1;
-
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
 }
-
+.exp-card p{
+    width: auto;
+    margin-top: 150px;
+    font-size: 1rem;
+    padding: 0;
+    text-align: center;
+}
 .card-wrapper:hover .card{
     height: 175px;
 }
